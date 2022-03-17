@@ -1,0 +1,7 @@
+name: CustomNPCBridge
+version: '${project.version}'
+main: com.chillaxmc.customnpcbridge.CustomNPCBridge
+api-version: 1.18
+authors: [ TheJbone ]
+description: Spigot Bridge for CustomNPCs
+depend: [PlaceholderAPI] # If your plugin requires PlaceholderAPI, to work, use this.
