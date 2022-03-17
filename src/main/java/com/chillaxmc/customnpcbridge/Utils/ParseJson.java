@@ -21,9 +21,8 @@ public class ParseJson {
                 try {
 
                     String fileOutput = Files.readAllLines(Paths.get((dataRoot + uuid + ".json"))).toString()
-                            .replaceAll("\"QuestData\"(.*)\"PlayerCompanionId\"","\"PlayerCompanionId\"");
+                            .replaceAll("([0-9])b|L","$1");
 
-                    plugin.getLogger().info(fileOutput);
                     JSONArray ja = (JSONArray) new JSONParser().parse(fileOutput);
                     JSONObject jo = (JSONObject) ja.get(0);
                     return jo.get("FactionData");
